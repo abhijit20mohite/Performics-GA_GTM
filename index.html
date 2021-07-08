@@ -23,7 +23,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	
 	
 	<h1>Performics Form</h1>
-	<form onsubmit="return false">
+	<form id="formID" onsubmit="return false">
 		
 		<input type="text" placeholder="Name" id="Name" />
 		
@@ -213,5 +213,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		
  		<br><br>
 </form>
+	
+	<script>
+function Validation() {
+  let x = document.forms["formID"]["Name"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+
+}
+</script>
 </body>
 </html>
