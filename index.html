@@ -23,9 +23,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	
 	
 	<h1>Performics Form</h1>
-	<form id="formID" onsubmit="return false">
+	
+	
+	<form name="myForm" action="/image_page" onsubmit="return validateForm()" method="post">
 		
-		<input type="text" placeholder="Name" id="Name" />
+		<input type="text" placeholder="Name" id="Name" name="fname"/>
 		
 		<br><br>
 		
@@ -213,12 +215,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		
  		<br><br>
 		
-		<input type="submit" value="Submit">
+		<input type="submit" value="Submit" onsubmit="return Validation()">
 </form>
 	
 	<script>
 function Validation() {
-  let x = document.forms["formID"]["Name"].value;
+  let x = document.forms["myForm"]["fname"].value;
   if (x == "") {
     alert("Name must be filled out");
     return false;
