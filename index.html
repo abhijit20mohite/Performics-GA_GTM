@@ -12,6 +12,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="utf-8">
 <title>GA GTM Testing</title>
 <link href="mm.css" rel="stylesheet" type="text/css">
+		<script>
+function Validation() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+
+}
+</script>
 </head>
 
 <body>
@@ -218,15 +228,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<input type="submit" value="Submit" onsubmit="return Validation()">
 </form>
 	
-	<script>
-function Validation() {
-  let x = document.forms["myForm"]["fname"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-
-}
-</script>
 </body>
 </html>
