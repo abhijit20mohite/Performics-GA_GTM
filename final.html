@@ -142,7 +142,7 @@ function GetURLParameter(sParam)
     }
 }
    
-$(document).ready(function() {
+function getsrc() {
     
       var date = getUrlParameter('Date');
         alert('date');
@@ -150,7 +150,8 @@ $(document).ready(function() {
 	$('img.active').attr('src', date);
     
 });
-      
+
+	 window.onload =getsrc();
       </script>
 </head>
 
