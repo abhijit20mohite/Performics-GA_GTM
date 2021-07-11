@@ -126,7 +126,7 @@ label,
    </style>	
 	
 <script>
-	
+var test = 0;	
 	
 function validateForm() {
 			    let name = document.getElementById("Name").value;
@@ -162,7 +162,7 @@ else if (email == "")
 else if (phno == "") 
 			 {
 			    alert("Phone Number must be filled out");
-				 return false;
+				 //return false;
 			    
 			  }
 else if(!/^\d{10}$/.test(phno))
@@ -187,10 +187,16 @@ else if(!male.checked && !female.checked)
 else 
 				{
 				//return true;
-				window.location.href = "https://abhijit20mohite.github.io/Performics-GA_GTM/images_select.html";				
+				//window.location.href = "https://abhijit20mohite.github.io/Performics-GA_GTM/images_select.html";
+					test=1;
 				}
       
   
+}
+	
+function newpage(){
+	if(test==1)
+	window.location.href = "https://abhijit20mohite.github.io/Performics-GA_GTM/images_select.html";		
 }
 
 </script>
@@ -391,7 +397,7 @@ else
 		
  		<br><br>
 		
-		<input class="button" type="submit" value="Submit" onclick="validateForm()">
+		<input class="button" type="submit" value="Submit" onclick="validateForm()" onclick="newpage()">
 </form>
     
     
