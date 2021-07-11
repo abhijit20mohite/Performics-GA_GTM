@@ -145,9 +145,9 @@ function GetURLParameter(sParam)
 $(document).ready(function() {
     
       var date = getUrlParameter('Date');
-        alert('Date');
+        alert('date');
 	
-	$('img').attr('src', date);
+	$('img.active').attr('src', date);
     
 });
       
@@ -157,7 +157,7 @@ $(document).ready(function() {
 <div class="parent-selector">
   <div class="select-image">
     <div class="list-image">
-      <img class="active" src="https://freesvg.org/img/kaylee.png" alt="1"/>
+      <img class="active" alt="1"/>
      </div>
     
     <div class="button" id="button-confirm"><span>Confirm</span></div>
