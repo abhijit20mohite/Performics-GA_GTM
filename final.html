@@ -126,19 +126,14 @@ label,
 
    </style>
   
- <script>
-      
+ <script> 
  
-function getsrc() {
-    
-      //var date = window.location.search.split('Date=')[1];
-      //  alert(date);
+ setTimeout(
+  function() 
+  {
+$('img.active').attr('src', window.location.search.split('Date=')[1]);
+  }, 1000);
 	
-	$('img.active').attr('src', window.location.search.split('Date=')[1]);
-    
-}
-
-	 window.onload =getsrc();
 	 
       </script>
 </head>
