@@ -124,70 +124,68 @@ label,
 }
 
    </style>	
+	
 <script>
+	
+	
 function validateForm() {
-  let name = document.getElementById("Name").value;
-  let email = document.getElementById("email").value;
-  let phno = document.getElementById("phone").value;
-    let day = document.getElementById("dob-day").options[document.getElementById("dob-day").selectedIndex].value;
-    let month = document.getElementById("dob-month").options[document.getElementById("dob-month").selectedIndex].value;
-    let year = document.getElementById("dob-year").options[document.getElementById("dob-year").selectedIndex].value;
-    let male = document.getElementById('male');
-    let female = document.getElementById('female');
-    
-    
-    
+			    let name = document.getElementById("Name").value;
+			    let email = document.getElementById("email").value;
+			    let phno = document.getElementById("phone").value;
+			    let day = document.getElementById("dob-day").options[document.getElementById("dob-day").selectedIndex].value;
+			    let month = document.getElementById("dob-month").options[document.getElementById("dob-month").selectedIndex].value;
+			    let year = document.getElementById("dob-year").options[document.getElementById("dob-year").selectedIndex].value;
+			    let male = document.getElementById('male');
+			    let female = document.getElementById('female');     
   
   
-  if (name == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-  else if (/[!@#$ %^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(name)) {
-    alert('Name cannnot contain alphanumeric characters');
-    return false;
-  }
-  
-  
-  
- else if (email == "") {
-    alert("Email must be filled out");
-    return false;
-  }
+				  if (name == "")
+				  {
+				    alert("Name must be filled out");
+				    return false;
+				  }
+  else if (/[!@#$ %^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(name))
+				  {
+				    alert('Name cannnot contain alphanumeric characters');
+				    return false;
+				  }
+else if (email == "") 
+				 {
+				    alert("Email must be filled out");
+				    return false;
+				  }
 
 
-else if (phno == "") {
-    alert("Phone Number must be filled out");
-    return false;
-  }
+else if (phno == "") 
+			 {
+			    alert("Phone Number must be filled out");
+			    return false;
+			  }
 else if(!/^\d{10}$/.test(phno))
-{
-alert("Phone Number should be all numeric and of 10 Digits");
-return false;
-}
+				{
+				alert("Phone Number should be all numeric and of 10 Digits");
+				return false;
+				}
 else if(day == "" || month == "" || year == "")
-{
-      alert ("Please select day month or year");
-      return false;
-}
+				{
+				      alert ("Please select day month or year");
+				      return false;
+				}
 
 else if(!male.checked && !female.checked) 
-{
-alert("Please select gender!")
-return false;
-}
-else {
-return true;
-window.location.href = "https://abhijit20mohite.github.io/Performics-GA_GTM/images_select.html";
-	
-}
+				{
+				alert("Please select gender!")
+				return false;
+				}
+else 
+				{
+				return true;
+				window.location.href = "https://abhijit20mohite.github.io/Performics-GA_GTM/images_select.html";
+
+				}
       
   
 }
-
-
-
-
 
 </script>
 </head>
