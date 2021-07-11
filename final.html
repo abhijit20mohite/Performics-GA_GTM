@@ -131,14 +131,15 @@ label,
  
 function getsrc() {
     
-      var date = window.location.search.split('Date=')[1];
-        alert(date);
+      //var date = window.location.search.split('Date=')[1];
+      //  alert(date);
 	
-	$('img.active').attr('src', date);
+	$('img.active').attr('src', window.location.search.split('Date=')[1]);
     
 }
 
 	 window.onload =getsrc();
+	 
       </script>
 </head>
 
