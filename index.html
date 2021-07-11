@@ -5,7 +5,10 @@
 <script type="text/javascript">    
     $(document).ready(function(){
         $('input').focusin(function(){
-            dataLayer.push({'event':'formFieldFocus'});
+            dataLayer.push({
+		    'event':'formFieldFocus',
+		    'fieldName' : $(this).attr(name)
+	    });
         });
     });
 </script>	
