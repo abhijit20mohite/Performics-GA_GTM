@@ -4,7 +4,7 @@
 <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript">    
     $(document).ready(function(){
-        $('input').focusin(function(){
+        $('input').focus(function(){
             dataLayer.push({
 		    'event':'formFieldFocus',
 		    'fieldName' : $(this).attr('name')
