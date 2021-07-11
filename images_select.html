@@ -2,19 +2,30 @@
 <head>
 <title>JQuery Image Selector</title>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+   <style> 
+   input {
+  display: inline-block;
+  margin: 10px;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+   </style>   
 </head>
 <h2>JQuery Image Selector Example</h2>
 <body>
 <div id="image_container">
-   <input type="image" src="https://javabeat.net/wp-content/uploads/2014/03/amazing-300x214.jpg" alt="amazing" class="aligncenter size-medium wp-image-15551" />
+   
+    <input type="image" src="https://javabeat.net/wp-content/uploads/2014/03/amazing-300x214.jpg" alt="amazing" class="aligncenter size-medium wp-image-15551" />
     <input type="image" src="https://javabeat.net/wp-content/uploads/2014/05/dummy_image2-300x300.jpg" alt="dummy_image2" width="300" height="300" class="aligncenter size-medium wp-image-19480" />
     <input type="image" src="https://javabeat.net/wp-content/uploads/2014/05/dummy_image1-300x210.jpg" alt="dummy_image1" width="300" height="210" class="aligncenter size-medium wp-image-19479" />
-</div>
+
+   </div>
 <script>
     $("div#image_container :image").click(function () {
         $("div#image_container :image").css("border", "0");
         $(this).css("border", "14px double green");
     });
+    
 </script>
 </body>
 </html>
