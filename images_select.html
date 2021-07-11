@@ -1,10 +1,72 @@
 <!doctype html>
 <html>
 <head>
+<script>
+	// import jQuery https://code.jquery.com/jquery-3.3.1.min.js
+var elementSelected = null;
+var typeSelected = false;
+
+$(document).on('click', '.list-image > img', function(){
+  $('.list-image > img').each(function(){
+    $(this).removeClass('active');
+  })
+  $(this).addClass('active');
+  elementSelected = $(this);
+  typeSelected = false;
+});
+
+$(document).on('input', '#text-src', function(){
+  $('.list-image > img').each(function(){
+    $(this).removeClass('active');
+  })
+  elementSelected = $(this);
+  typeSelected = true;
+})
+
+$(document).on('click', '#button-confirm', function(){
+  $('.select-image').hide();
+  if(typeSelected == true){
+    $('.view-image > img').attr('src', elementSelected.val());
+  }
+  else{
+    $('.view-image > img').attr('src', elementSelected.attr('src'));
+  }
+  $('.view-image').fadeIn('high');
+})
+
+$(document).on('click', '#button-other', function(){
+  $('.view-image').hide();
+  $('.select-image').fadeIn('high');
+})
+	</script>	
 <meta charset="utf-8">
 </head>
 
 <body>
 	<h1> Test </h1>
+	
+	
+	<div class="parent-selector">
+  <div class="select-image">
+    <div class="list-image">
+      <img class="active" src="https://www.graphicsprings.com/filestorage/stencils/18caf1005c4eedca8b833788e88e53bc.svg" alt="1"/>
+      <img src="https://www.graphicsprings.com/filestorage/stencils/4f97c0da61af25cc6bf355c3ada42299.png?width=500&height=500" alt="2"/>
+      <img src="https://www.graphicsprings.com/filestorage/stencils/18caf1005c4eedca8b833788e88e53bc.svg" alt="1"/>
+      <img src="https://www.graphicsprings.com/filestorage/stencils/4f97c0da61af25cc6bf355c3ada42299.png?width=500&height=500" alt="2"/>
+    </div>
+    <div class="input-div">
+      <input id="text-src" type="text" class="input-text" placeholder="URL de l'image">
+      <label class="input-label">URL de l'image</label>
+    </div>
+    <div class="button" id="button-confirm"><span>Confirm</span></div>
+  </div>
+  <div class="view-image" style="display: none;">
+    <img src=""/>
+    <div class="button" id="button-other"><span>Other</span></div>
+  </div>
+</div>
+	
+	
+	
 </body>
 </html>
