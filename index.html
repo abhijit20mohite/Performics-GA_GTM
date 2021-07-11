@@ -155,13 +155,13 @@ function validateForm() {
   else if (/[!@#$ %^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(name))
 				  {
 				    alert('Name cannnot contain alphanumeric characters');
-					//  return false;
+					return false;
 				    
 				  }
 else if (email == "") 
 				 {
 				    alert("Email must be filled out");
-					 //return false;
+					 return false;
 				    
 				  }
 
@@ -169,31 +169,31 @@ else if (email == "")
 else if (phno == "") 
 			 {
 			    alert("Phone Number must be filled out");
-				 //return false;
+				 return false;
 			    
 			  }
 else if(!/^\d{10}$/.test(phno))
 				{
 				alert("Phone Number should be all numeric and of 10 Digits");
-					//return false;
+					return false;
 				
 				}
 else if(day == "" || month == "" || year == "")
 				{
 				      alert ("Please select day month or year");
-					//return false;
+					return false;
 				      
 				}
 
 else if(!male.checked && !female.checked) 
 				{
 				alert("Please select gender!");
-					//return false;
+					return false;
 				
 				}
 else 
 				{
-				//return true;
+				return true;
 				//window.location.href = "https://abhijit20mohite.github.io/Performics-GA_GTM/images_select.html";
 					test=1;
 				}
@@ -214,7 +214,7 @@ function newpage(){
  
 	<h2>JavaScript Validation Form</h2>
 
-  <form name="myForm" onsubmit="return validateForm()" action="https://abhijit20mohite.github.io/Performics-GA_GTM/images_select.html">
+  <form name="myForm" id="form123" onsubmit="return validateForm()" action="https://abhijit20mohite.github.io/Performics-GA_GTM/images_select.html">
 		
     Name : <input type="text" id="Name" name="fname"/>
 		
