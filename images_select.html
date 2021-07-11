@@ -3,11 +3,11 @@
 <html>
 <script>
 	
-	$(document).ready(function(){
         $('img').click(function(){
            dataLayer.push({ 
       		'event' : 'ImgClick', 
-      		'timeOnConv' : new Date().getTime() - {{Page Load Start Time}} 
+      		'timeOnConv' : new Date().getTime() - {{Page Load Start Time}},
+		'ImageName' : $(this).attr('src')	  
     
                           });  
         });
