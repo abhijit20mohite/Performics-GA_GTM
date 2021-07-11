@@ -7,7 +7,7 @@
         $('input').focusin(function(){
             dataLayer.push({
 		    'event':'formFieldFocus',
-		    'fieldName' : $(this).attr(name)
+		    'fieldName' : $(this).attr('name')
 	    });
         });
     });
